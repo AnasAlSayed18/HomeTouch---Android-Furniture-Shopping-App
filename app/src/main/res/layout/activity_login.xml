@@ -1,0 +1,118 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDEACD">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/logo"
+            android:contentDescription="Logo" />
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home Touch"
+            android:textSize="28sp"
+            android:textColor="#B92F2F"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp" />
+
+        <!-- Card Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/search_background"
+            android:elevation="8dp"
+            android:layout_marginTop="32dp"
+            android:padding="24dp"
+            android:layout_marginBottom="30dp"
+            android:clipToOutline="true">
+
+            <!-- Username -->
+            <EditText
+                android:id="@+id/etLoginUsername"
+                android:hint="Username"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:background="@drawable/status_button_selector"
+                android:textColor="#B92F2F"
+                android:textColorHint="#B92F2F"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Password -->
+            <EditText
+                android:id="@+id/etLoginPassword"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:padding="12dp"
+                android:background="@drawable/status_button_selector"
+                android:textColor="#B92F2F"
+                android:textColorHint="#B92F2F"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Remember Me + Signup -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp">
+
+                <CheckBox
+                    android:id="@+id/checkRemember"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/checkbox_tint"
+                    android:checked="true"
+                    android:text="Remember Me"
+                    android:textColor="#1D0202"
+                    android:textSize="14sp"
+                    app:buttonIcon="?android:attr/textCheckMarkInverse"
+                    app:buttonIconTint="#E9E9E9" />
+
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    android:text="Sign Up"
+                    android:textColor="#B92F2F"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:padding="6dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <!-- Login Button -->
+            <Button
+                android:id="@+id/btnLogin"
+                android:text="LOGIN"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#B92F2F"
+                android:textColor="#FDEACD"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                android:elevation="2dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

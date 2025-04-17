@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FDEACD">
+
+    <!-- App Logo -->
+
+    <!-- App Title -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:padding="5dp"
+        android:src="@drawable/logo"
+        android:background="@drawable/search_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Home Touch"
+        android:textColor="#B92F2F"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/logo"
+        app:layout_constraintTop_toTopOf="@id/logo"
+        app:layout_constraintBottom_toBottomOf="@id/logo"/>
+
+    <!-- Cart Title -->
+    <TextView
+        android:id="@+id/cartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:shadowColor="#C22F2F"
+        android:text="Your Cart"
+        android:textColor="#C43030"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appTitle" />
+
+    <!-- ListView to display cart items -->
+    <ListView
+        android:id="@+id/cartListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:cacheColorHint="#8E0404"
+        android:clipToPadding="false"
+        android:dividerHeight="1dp"
+        android:fadeScrollbars="true"
+        android:fastScrollAlwaysVisible="true"
+        android:fastScrollEnabled="false"
+        android:footerDividersEnabled="false"
+        app:layout_constraintBottom_toTopOf="@id/cartSummaryLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cartTitle" />
+
+    <!-- Cart Summary Layout (Total and Checkout Button) -->
+    <LinearLayout
+        android:id="@+id/cartSummaryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/cartListView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        android:layout_margin="16dp">
+
+        <!-- Total Sum Text -->
+        <TextView
+            android:id="@+id/totalSumText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:shadowColor="#B92E2E"
+            android:text="Total: $0.00"
+            android:textColor="#31B438"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Checkout Button -->
+        <Button
+            android:id="@+id/checkoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Proceed to Checkout"
+            style="@style/buttonStyle"
+            />
+    </LinearLayout>
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:background="@drawable/rounded_top_nav"
+        android:clickable="false"
+        android:clipChildren="false"
+        android:contextClickable="false"
+        android:longClickable="false"
+        app:itemIconTint="@color/red"
+        app:itemTextColor="@color/red"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/main_menu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

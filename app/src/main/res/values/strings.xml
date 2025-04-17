@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">HomeTouch</string>
+
+    <string-array name="type_filter_array">
+    <item>All</item>
+    <item>Sofa</item>
+    <item>Chair</item>
+    <item>Table</item>
+        <item>Bed</item>
+        <item>Light</item>
+        <item>Area Rug</item>
+        <item>Desk</item>
+    </string-array>
+
+    <string-array name="status_filter_array">
+        <item>All</item>
+        <item>Available</item>
+        <item>Sold Out</item>
+    </string-array>
+</resources>
+

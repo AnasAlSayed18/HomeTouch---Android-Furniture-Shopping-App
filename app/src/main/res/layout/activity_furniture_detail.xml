@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FDEACD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="← Back"
+        android:layout_marginTop="30dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textColor="#C62F2F"
+        android:backgroundTint="#000000"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:layout_marginBottom="8dp"
+        android:elevation="2dp"/>
+
+    <!-- Product Image -->
+    <ImageView
+        android:id="@+id/detailImage"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/search_background"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Product Name -->
+    <TextView
+        android:id="@+id/detailName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:textColor="#B22A2A"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <!-- Product Price -->
+    <TextView
+        android:id="@+id/detailPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:textColor="#2F9134"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <!-- Quantity -->
+    <TextView
+        android:id="@+id/detailQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:textColor="#630202"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        />
+
+    <!-- Type -->
+    <TextView
+        android:id="@+id/detailType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:textColor="#630202"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"  />
+
+    <!-- Status -->
+    <TextView
+        android:id="@+id/detailStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textColor="#630202"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"  />
+
+
+    <EditText
+        android:id="@+id/quantityPicker"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Select Quantity"
+        android:inputType="numberDecimal"
+        android:textColor="#630202"
+        android:textStyle="bold|italic" />
+
+    <Button
+        android:id="@+id/addToCartButton"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+
+
+        android:layout_marginBottom="12dp"
+        android:elevation="4dp"
+        android:text="Add to Cart"
+        android:textAllCaps="true"
+        android:textColor="#FFECCF"
+        app:icon="@drawable/ic_add_to_cart"
+        app:iconTint="#FDEACD"
+        app:iconPadding="2dp"
+        />
+
+
+</LinearLayout>
